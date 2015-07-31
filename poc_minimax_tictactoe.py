@@ -38,7 +38,7 @@ def mm_move(board, player):
         board_copy = board.clone()
         board_copy.move(row, col, player)
         if board_copy.check_win() is None:
-            score, move = mm_move(board_copy, provided.switch_player(player))
+            score, _ = mm_move(board_copy, provided.switch_player(player))
         else:
             score = SCORES[board_copy.check_win()]
 
